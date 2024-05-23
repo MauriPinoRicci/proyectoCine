@@ -7,27 +7,28 @@ tempData.forEach((movie) => {
 
     const titleElement = document.createElement('a');
     titleElement.classList.add("card-title");
-    titleElement.innerHTML = movie.title;
+    titleElement.innerHTML = `<strong>Título :</strong> ${movie.title}`;
 
     const yearElement = document.createElement('p');
     yearElement.classList.add("card-text");
-    yearElement.innerHTML = movie.year;
+    yearElement.innerHTML = `<strong>Año :</strong> ${movie.year}`;
 
     const directorElement = document.createElement('h4');
     directorElement.classList.add("card-text");
-    directorElement.innerHTML = movie.director;
+    directorElement.innerHTML = `<strong>Director :</strong> ${movie.director}`;
+
 
     const durationElement = document.createElement('p');
     durationElement.classList.add("card-text");
-    durationElement.innerHTML = movie.duration;
+    durationElement.innerHTML =  `<strong>Duración :</strong> ${movie.duration}`;
 
     const genreElement = document.createElement('p');
     genreElement.classList.add("card-text");
-    genreElement.innerHTML = movie.genre;
+    genreElement.innerHTML =`<strong>Género :</strong> ${movie.genre}`;
 
     const rateElement = document.createElement('p');
     rateElement.classList.add("card-text");
-    rateElement.innerHTML = movie.rate;
+    rateElement.innerHTML = `<strong>Puntuación :</strong> ${movie.rate}`;
 
     const imageElement = document.createElement('img');
     imageElement.classList.add("card-img");

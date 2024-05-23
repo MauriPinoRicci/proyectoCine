@@ -113,8 +113,12 @@ a:hover {
     padding: 10px;
     border: 2px solid #ffffff;
     border-radius: 10px;
-    background-color: #424242;
     background-color: rgba(0, 0, 0, 0.5); /* color de fondo con transparencia */
+}
+
+.card:hover{
+    transform: scale(1.02); /* Escala la tarjeta al 105% de su tamaño original */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade un poco más de sombra para dar efecto de elevación */
 }
 
 .card-title {
