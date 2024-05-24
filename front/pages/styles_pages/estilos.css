@@ -1,0 +1,170 @@
+body {
+    background-color: #212121;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+   
+}
+
+.logo-container {
+    width: 50px; /* Ajusta el tamaño del contenedor según sea necesario */
+    height: 50px; /* Ajusta el tamaño del contenedor según sea necesario */
+    overflow: hidden; /* Oculta las partes de la imagen que se salen del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+
+.logo {
+    width: 130%; /* Ajusta el ancho de la imagen para hacerla más grande */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+.logo:hover{
+    transform: scale(1.1); /* Ajusta el valor para mayor o menor zoom */   
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 35px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+h2 {
+    margin: 15px;
+    font-size: 25px;
+}
+
+#section_yo {
+    max-width: 800px;
+    /* Establecer un ancho máximo */
+    margin: 0 auto;
+    /* Centrar la sección en la pantalla */
+    padding: 20px;
+    /* Añadir espacio interno */
+    font-size: 15px;
+    background-color: #424242;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.title_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+}
+
+#paragraph_section {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.2
+}
+
+#section_Tecnologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    /* Establecer un ancho máximo */
+    margin: 0 auto;
+    /* Centrar la sección en la pantalla */
+    padding: 20px;
+    /* Añadir espacio interno */
+    font-size: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: #424242;
+}
+
+.card-container {
+    display: flex;
+    /* Convertir el contenedor en un contenedor flex */
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    /* Alinea las tarjetas horizontalmente en el centro */
+    align-items: center;
+    /* Alinea los logos verticalmente en el centro */
+    border-radius: 20px;
+    padding-top: 10px;
+    height: 200px;
+    width: 200px;
+    /* Ancho de cada tarjeta */
+    margin: 30px;
+    /* Espacio entre cada tarjeta */
+    background-color: #ffffff;
+}
+
+.card1 img {
+    filter: grayscale(100%);
+    /* Aplicar escala de grises a todas las imágenes */
+    transition: filter 0.3s ease;
+    /* Agregar una transición suave */
+}
+
+.card1:hover img {
+    filter: grayscale(0%);
+    /* Eliminar la escala de grises al pasar el cursor sobre las imágenes */
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+#logo_css {
+    width: 160px;
+}
+
+#logo_js {
+    width: 95px;
+}
+
+.links {
+    font-size: 17px;
+    line-height: 2;
+    padding: 10px;
+    font-weight: 400;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E49BFF;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding-top: 15px;
+}
