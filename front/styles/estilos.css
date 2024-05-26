@@ -41,7 +41,7 @@ nav {
 
 .title_cine{
     font-size: xx-large;
-    font-weight: 600;
+    font-weight: 500;
     padding-left: 345px;
 }
 
@@ -82,11 +82,7 @@ a:hover {
     padding-left: 40px;
     margin-top: 30px;
     font-size: 30px;
-    font-weight: 500;
-}
-
-.section_title:hover{
-    transform: rotate(4deg);
+    font-weight: 350;
 }
 
 #container {
@@ -95,7 +91,7 @@ a:hover {
     justify-content: center;
     height: max-content;
     margin: 70px ;
-    padding: 20px;
+    padding: 10px;
     font-size: 15px;
     border-radius: 15px;
     gap: 10px;
@@ -136,6 +132,10 @@ a:hover {
     height: 220px;
     width: 220px;
     padding: 5px;
+}
+
+.strong-text {
+    font-weight: 530;
 }
 
 footer{
