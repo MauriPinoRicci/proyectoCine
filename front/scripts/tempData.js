@@ -15,7 +15,7 @@ const tempData = [
     director: " Joss Whedon",
     duration: "2h 23min",
     genre: ["Action", "Adventure", "War", "Sci-Fi"],
-    rate: 8.7,
+    rate: 10,
     poster:
     "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2A1EFFF25D5605C16853C0192DF7063FC12C54CAA1BC733B687B182DBB9ABBD8/scale?width=506&amp;aspectRatio=2.00&amp;format=webp",
   },

@@ -12,27 +12,43 @@ nav {
     height: 50px;
     padding: 10px;
     margin: 10px;
-   
+
 }
 
 .logo-container {
-    width: 50px; /* Ajusta el tamaño del contenedor según sea necesario */
-    height: 50px; /* Ajusta el tamaño del contenedor según sea necesario */
-    overflow: hidden; /* Oculta las partes de la imagen que se salen del contenedor */
+    width: 40px;
+    /* Ajusta el tamaño del contenedor según sea necesario */
+    height: 40px;
+    /* Ajusta el tamaño del contenedor según sea necesario */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 20px;
 }
 
 .logo {
-    width: 130%; /* Ajusta el ancho de la imagen para hacerla más grande */
-    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 30px;
+    width: 130%;
+    /* Ajusta el ancho de la imagen para hacerla más grande */
+    height: auto;
+    /* Mantén la proporción de la imagen */
 }
 
-.logo:hover{
-    transform: scale(1.1); /* Ajusta el valor para mayor o menor zoom */   
+.logo:hover {
+    transform: scale(1.2);
+    /* Ajusta el valor para mayor o menor zoom */
+}
+
+.links {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 5px;
+    /* Espacio entre los textos */
+    font-size: 17px;
+    line-height: 2;
+    padding: 10px;
+    font-weight: 400;
 }
 
 header {
@@ -44,11 +60,35 @@ header {
     font-size: 20px;
 }
 
+.perfil {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.img_container {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.img_container img {
+    position: absolute;
+    top: 150%;
+    left: 62%;
+    width: 150px; /* Incrementa este valor para un mayor zoom */
+    height: auto;
+    transform: translate(-50%, -50%) scale(1.5); /* Ajusta el valor de scale según sea necesario */
+    object-fit: cover;
+}
 h1 {
     margin: 10px;
     font-size: 35px;
     padding-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h2 {
@@ -145,13 +185,6 @@ img {
     width: 95px;
 }
 
-.links {
-    font-size: 17px;
-    line-height: 2;
-    padding: 10px;
-    font-weight: 400;
-}
-
 a {
     color: #ffffff;
     text-decoration: none;
@@ -161,7 +194,7 @@ a:hover {
     color: #E49BFF;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
