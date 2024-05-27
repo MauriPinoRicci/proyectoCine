@@ -78,13 +78,15 @@ header {
     position: absolute;
     top: 187%;
     left: 50%;
-    width: 200px; /* Incrementa este valor para un mayor zoom */
+    width: 200px;
+    /* Incrementa este valor para un mayor zoom */
     height: auto;
-    transform: translate(-50%, -50%) scale(1.5); /* Ajusta el valor de scale según sea necesario */
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Ajusta el valor de scale según sea necesario */
     object-fit: cover;
 }
 
-.img_container:hover{
+.img_container:hover {
     transform: scale(1.4);
 }
 
@@ -109,7 +111,8 @@ h2 {
     padding: 20px;
     /* Añadir espacio interno */
     font-size: 15px;
-    background-color: rgba(69, 68, 68, 0.5); /* color de fondo con transparencia */
+    background-color: rgba(69, 68, 68, 0.5);
+    /* color de fondo con transparencia */
     border-radius: 15px;
     margin-bottom: 10px;
 }
@@ -141,7 +144,8 @@ h2 {
     font-size: 15px;
     border-radius: 15px;
     margin-bottom: 10px;
-    background-color: rgba(69, 68, 68, 0.5); /* color de fondo con transparencia */
+    background-color: rgba(69, 68, 68, 0.5);
+    /* color de fondo con transparencia */
 }
 
 .card-container {
@@ -204,5 +208,5 @@ footer {
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    padding-top: 15px;
+    padding-top: 50px;
 }
