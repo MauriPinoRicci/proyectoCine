@@ -2,62 +2,95 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Henry</title>
-    <link rel="stylesheet" href="./styles_pages/estilos_proyecto.css">
+    <link rel="stylesheet" href="./styles_pages/estilos_proyecto.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 </head>
 
-<body>
-    <nav>
-        <div class="logo-container">
-            <a href="/"><img class="logo"
+<body class="container-fluid body_custom">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid container-fluid logo-container">
+            <a class="navbar-brand" href="/">
+                <img class="logo"
                     src="https://static.vecteezy.com/system/resources/previews/016/733/452/non_2x/cinema-logo-vector.jpg"
-                    alt="">
+                    alt="Logo Pagina Web" />
+                <span class="navbar-text">Cines Maipú</span>
             </a>
-        </div>
-        <div class="links">
-            <a href="/">Home |</a>
-            <a href="./sobre_mi.html">Sobre Mí |</a>
-            <a target="_blank" href="https://es.wikipedia.org/wiki/Historia_del_cine">Historia del Cine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse links" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./sobre_mi.html">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"
+                            href="https://es.wikipedia.org/wiki/Historia_del_cine">Historia del
+                            Cine</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <section class="section">
         <h2 class="title_section">Sobre este Proyecto</h2>
-        <p class="paragraph_section">El proyecto consiste en una simulación de una página web de un cine, diseñada para
-            ofrecer a los usuarios una experiencia similar a la de un sitio real. La página incluye varias secciones
-            clave: cartelera de películas, detalles de cada película, historia del cine e información del desarrollador.
+        <p class="paragraph_section">
+            El proyecto consiste en una simulación de una página web de un cine,
+            diseñada para ofrecer a los usuarios una experiencia similar a la de un
+            sitio real. La página incluye varias secciones clave: cartelera de
+            películas, detalles de cada película, historia del cine e información
+            del desarrollador.
         </p>
-        <h2 class="title_section">Tecnologias Utilizadas</h2>
-        <p>
+        <h2 class="title_section">Tecnologías Utilizadas</h2>
+        <ul>
             <li class="paragraph_section">
-                <span class="paragraph_title"> <strong>HTML:</strong></span> Se utiliza para estructurar el contenido de
-                la página,
-                incluyendo la creación de elementos como tarjetas para las peliculas y contenedores para las distintas
-                secciones de
-                la página.
+                <span class="paragraph_title"> <strong>HTML:</strong></span> Se
+                utiliza para estructurar el contenido de la página, incluyendo la
+                creación de elementos como tarjetas para las películas y contenedores
+                para las distintas secciones de la página.
             </li>
             <li class="paragraph_section">
-                <span class="paragraph_title_css"> <strong>CSS:</strong></span> Se usa para estilizar la página y mejorar la
-                experiencia del usuario a través de
-                diseños responsivos, efectos visuales y animaciones.
+                <span class="paragraph_title_css"> <strong>CSS:</strong></span> Se usa
+                para estilizar la página y mejorar la experiencia del usuario a través
+                de diseños responsivos, efectos visuales y animaciones.
             </li>
             <li class="paragraph_section">
-                <span class="paragraph_title_js"><strong>JavaScript:</strong></span> Se emplea para agregar
-                interactividad a la página, como la actualización
-                dinámica del contenido, la integración de páginas web externas, entre otros.
+                <span class="paragraph_title_js"><strong>JavaScript:</strong></span>
+                Se emplea para agregar interactividad a la página, como la
+                actualización dinámica del contenido, la integración de páginas web
+                externas, entre otros.
             </li>
-        </p>
+        </ul>
 
-        <p class="contacto"><strong>Contacto y Sugerencias:</strong> <span class="email">mauripinoricci@gmail.com</span>
+        <p class="contacto">
+            <strong>Contacto y Sugerencias:</strong>
+            <span class="email">mauripinoricci@gmail.com</span>
         </p>
     </section>
-
-    <footer><a target="_blank" href="https://www.instagram.com/mauripinoricci/">Desarrollado por Mauri Pino Ricci</a>
+    
+    <footer>
+        <a target="_blank" href="https://www.instagram.com/mauripinoricci/">Desarrollado por Mauri Pino Ricci</a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-<!-- podria agregarle hover a las Tecnologias utilizadas -->

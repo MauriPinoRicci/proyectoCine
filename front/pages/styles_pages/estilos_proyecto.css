@@ -1,25 +1,34 @@
-body {
+.body_custom {
+    background-color: #212121;
     color: #ffffff;
-    padding-bottom: 20px;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTEwL3Jhd3BpeGVsb2ZmaWNlM19yb3dzX29mX2VtcHR5X3JlZF9zZWF0c19pbl9jaW5lbWFfZWVhNDA4NGItMTEwNC00MjY2LWE0NjctOTlhZDI5MTRkODQ5LWIuanBn.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 30%;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.81);
-    /* color de fondo con transparencia */
+    font-weight: 500;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    padding: 10px;
-    margin: 10px;
+/* Estilos para el navbar */
+.navbar-custom {
+    background-color: rgba(19, 18, 18, 0.8);
+    /* Cambia "red" al color rojo que desees */
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* Estilos para el texto dentro del navbar */
+.navbar-custom .navbar-text,
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 420;
+    /* Centrar el texto */
+    text-align: center;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: white; /* Cambiar el color del borde del botón */
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    /* Cambiar el color del icono de hamburguesa a blanco */
 }
 
 .logo-container {
@@ -34,11 +43,9 @@ nav {
 }
 
 .logo {
-    border-radius: 30px;
-    width: 130%;
-    /* Ajusta el ancho de la imagen para hacerla más grande */
-    height: auto;
-    /* Mantén la proporción de la imagen */
+    border-radius: 40px;
+    height: 50px;
+    width: 50px;
 }
 
 .logo:hover {
@@ -48,23 +55,15 @@ nav {
 
 .links {
     display: flex;
-    flex: 1;
-    justify-content: center;
-    gap: 5px;
-    /* Espacio entre los textos */
+    justify-content: flex-end;
+    align-items: center;
     font-size: 17px;
     line-height: 2;
     padding: 10px;
+    font-weight: 400;
+    background-color: rgba(128, 128, 128, 0.4);
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #E49BFF;
-}
 
 .section {
     max-width: 900px;
@@ -79,6 +78,7 @@ a:hover {
     /* color de fondo con transparencia */
     border-radius: 15px;
     margin-bottom: 10px;
+    font-weight: lighter;
 }
 
 .title_section {
@@ -135,5 +135,20 @@ footer {
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    padding-top: 60px;
+    padding: 10px;
+}
+
+footer a{
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+footer a:hover{
+    font-weight: bold;
+    background-color: black;
+    box-shadow:  1px 2px 2px rgba(250, 0, 0, 0.8);
 }
