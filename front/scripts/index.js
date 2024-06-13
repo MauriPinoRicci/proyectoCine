@@ -15,4 +15,4 @@ const fetchDataAndRenderCards = async () => {
 
 fetchDataAndRenderCards();
 
-//queda pendiente hacer commit de la hw clase 6
+//queda pendiente hacer commit de la hw clase 6 (correjir)
