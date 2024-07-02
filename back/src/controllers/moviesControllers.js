@@ -12,11 +12,6 @@ module.exports = {
 
   createMovie: async (req, res, next) => {
     try {
-      // Verifica si req.body está definido y contiene los datos esperados
-      if (!req.body || !req.body.title || !req.body.year || !req.body.director || !req.body.duration || !req.body.rate || !req.body.genre || !req.body.poster) {
-        return res.status(400).json({ error: 'Faltan datos en el cuerpo de la solicitud.' });
-      }
-
       const { title, year, director, duration, rate, genre, poster } = req.body;
 
       const movieData ={ title, year, director, duration, rate, genre, poster };

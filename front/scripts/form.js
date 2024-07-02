@@ -1,11 +1,3 @@
-import axios from 'axios';
-
-
-// Función para limpiar los campos del formulario
-function limpiarFormulario() {
-  document.getElementById("formulario").reset();
-}
-
 // Función para enviar el formulario y manejar el evento de envío
 function enviarFormulario(event) {
   event.preventDefault(); // Evita que el formulario se envíe automáticamente
@@ -17,6 +9,7 @@ function enviarFormulario(event) {
   const duracion = document.getElementById("duracion").value.trim();
   const genero = document.getElementById("genero").value.trim();
   const puntuacion = document.getElementById("puntuacion").value.trim();
+  const poster = document.getElementById("poster").value.trim();
 
   // Validar que todos los campos estén completos
   if (
@@ -25,7 +18,8 @@ function enviarFormulario(event) {
     director === "" ||
     duracion === "" ||
     genero === "" ||
-    puntuacion === ""
+    puntuacion === "" ||
+    poster === ""
   ) {
     alert("Por favor, completa todos los campos."); // Mostrar mensaje de error
     return;
@@ -39,12 +33,12 @@ function enviarFormulario(event) {
     duration: duracion,
     genre: genero.split(",").map((g) => g.trim()), // Convertir géneros a un array
     rate: parseFloat(puntuacion),
-    poster: "", // Aquí puedes agregar la URL del póster si tienes esa funcionalidad
+    poster: poster,
   };
 
   // Enviar los datos a través de Axios
   axios
-    .post("/movies", movieData) // Asumiendo que "/movies" es la ruta correcta para crear una película en tu servidor
+    .post("http://localhost:3000/movies", movieData) // Asumiendo que "/movies" es la ruta correcta para crear una película en tu servidor
     .then((response) => {
       // Aquí puedes manejar la respuesta del servidor si es necesario
       console.log("Película creada:", response.data);
@@ -55,8 +49,7 @@ function enviarFormulario(event) {
       // Mostrar un mensaje de éxito
       alert("Película creada correctamente!");
 
-      // Aquí podrías llamar a una función para renderizar la nueva película en el front-end si es necesario
-      // renderCards(response.data);
+      //renderCards(response.data);
     })
     .catch((error) => {
       console.error("Error al crear película:", error);
@@ -64,4 +57,9 @@ function enviarFormulario(event) {
         "Hubo un error al crear la película. Por favor, intenta nuevamente."
       );
     });
+}
+
+// Función para limpiar los campos del formulario
+function limpiarFormulario() {
+  document.getElementById("formulario").reset();
 }

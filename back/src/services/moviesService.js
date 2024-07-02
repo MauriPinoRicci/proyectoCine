@@ -8,9 +8,8 @@ module.exports = {
 
   createMovie: async (movieData) => {
     try {
-      const newMovie = new Movie(movieData);
-      await newMovie.save();
-      return newMovie;
+      const movie = await Movie.create(movieData);
+      return movie;
     } catch (error) {
       throw new Error("Error creating movie: " + error.message);
     }

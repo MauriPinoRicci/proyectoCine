@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 const conDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Conectado a MongoDB exitosamente"); // Añadir un mensaje de éxito
+    console.log("Conectado a MongoDB exitosamente");
   } catch (error) {
     console.error("Error al conectar a MongoDB", error);
-    throw error; // Lanzar el error para que el catch en el archivo principal lo capture
+    throw error; 
   }
 };
 
