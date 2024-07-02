@@ -10,7 +10,7 @@ module.exports = {
     }
   },
 
-  postMovies: async (req, res, next) => {
+  createMovie: async (req, res, next) => {
     try {
       // Verifica si req.body está definido y contiene los datos esperados
       if (!req.body || !req.body.title || !req.body.year || !req.body.director || !req.body.duration || !req.body.rate || !req.body.genre || !req.body.poster) {
@@ -19,19 +19,13 @@ module.exports = {
 
       const { title, year, director, duration, rate, genre, poster } = req.body;
 
-      const nuevaPelicula = await moviesService.postMovies({
-        title,
-        year,
-        director,
-        duration,
-        rate,
-        genre,
-        poster,
-      });
+      const movieData ={ title, year, director, duration, rate, genre, poster };
+
+      const newMovie = await moviesService.createMovie(movieData);
 
       res.status(201).json({
         message: "Película creada correctamente",
-        pelicula: nuevaPelicula,
+        pelicula: newMovie,
       });
     } catch (error) {
       next(error); // Pasar el error al siguiente middleware de manejo de errores

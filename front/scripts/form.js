@@ -1,5 +1,5 @@
-const axios = require('axios');
-import renderCards from "../scripts/render_cards";
+import axios from 'axios';
+
 
 // Función para limpiar los campos del formulario
 function limpiarFormulario() {
@@ -44,7 +44,7 @@ function enviarFormulario(event) {
 
   // Enviar los datos a través de Axios
   axios
-    .post("/movies", movieData)
+    .post("/movies", movieData) // Asumiendo que "/movies" es la ruta correcta para crear una película en tu servidor
     .then((response) => {
       // Aquí puedes manejar la respuesta del servidor si es necesario
       console.log("Película creada:", response.data);
@@ -55,8 +55,8 @@ function enviarFormulario(event) {
       // Mostrar un mensaje de éxito
       alert("Película creada correctamente!");
 
-      // Actualizar la interfaz para mostrar la nueva película creada
-      renderCards(response.data);
+      // Aquí podrías llamar a una función para renderizar la nueva película en el front-end si es necesario
+      // renderCards(response.data);
     })
     .catch((error) => {
       console.error("Error al crear película:", error);

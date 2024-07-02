@@ -6,13 +6,13 @@ module.exports = {
     return movies;
   },
 
-  postMovies: async (movieData) => {
+  createMovie: async (movieData) => {
     try {
       const newMovie = new Movie(movieData);
-      const savedMovie = await newMovie.save();
-      return savedMovie;
+      await newMovie.save();
+      return newMovie;
     } catch (error) {
-      throw new Error(error.message); // Lanza un error para ser manejado por el controlador
+      throw new Error("Error creating movie: " + error.message);
     }
   },
 };

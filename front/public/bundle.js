@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./scripts/form.js":
+/*!*************************!*\
+  !*** ./scripts/form.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\nconst renderCards = __webpack_require__(/*! ./render_cards */ \"./scripts/render_cards.js\");\r\n\r\n// Función para limpiar los campos del formulario\r\nfunction limpiarFormulario() {\r\n  document.getElementById(\"formulario\").reset();\r\n}\r\n\r\n// Función para enviar el formulario y manejar el evento de envío\r\nfunction enviarFormulario(event) {\r\n  event.preventDefault(); // Evita que el formulario se envíe automáticamente\r\n\r\n  // Obtener los valores de los campos del formulario\r\n  const titulo = document.getElementById(\"titulo\").value.trim();\r\n  const año = document.getElementById(\"año\").value.trim();\r\n  const director = document.getElementById(\"director\").value.trim();\r\n  const duracion = document.getElementById(\"duracion\").value.trim();\r\n  const genero = document.getElementById(\"genero\").value.trim();\r\n  const puntuacion = document.getElementById(\"puntuacion\").value.trim();\r\n\r\n  // Validar que todos los campos estén completos\r\n  if (\r\n    titulo === \"\" ||\r\n    año === \"\" ||\r\n    director === \"\" ||\r\n    duracion === \"\" ||\r\n    genero === \"\" ||\r\n    puntuacion === \"\"\r\n  ) {\r\n    alert(\"Por favor, completa todos los campos.\"); // Mostrar mensaje de error\r\n    return;\r\n  }\r\n\r\n  // Crear objeto con los datos de la película\r\n  const movieData = {\r\n    title: titulo,\r\n    year: año,\r\n    director: director,\r\n    duration: duracion,\r\n    genre: genero.split(\",\").map((g) => g.trim()), // Convertir géneros a un array\r\n    rate: parseFloat(puntuacion),\r\n    poster: \"\", // Aquí puedes agregar la URL del póster si tienes esa funcionalidad\r\n  };\r\n\r\n  // Enviar los datos a través de Axios\r\n  axios\r\n    \r\n    .post(\"/movies\", movieData)\r\n    .then((response) => {\r\n      // Aquí puedes manejar la respuesta del servidor si es necesario\r\n      console.log(\"Película creada:\", response.data);\r\n\r\n      // Limpiar el formulario después de enviar con éxito\r\n      limpiarFormulario();\r\n\r\n      // Mostrar un mensaje de éxito\r\n      alert(\"Película creada correctamente!\");\r\n\r\n      renderCards(response.data);\r\n    })\r\n    \r\n    .catch((error) => {\r\n      console.error(\"Error al crear película:\", error);\r\n      alert(\r\n        \"Hubo un error al crear la película. Por favor, intenta nuevamente.\"\r\n      );\r\n    });\r\n}\r\n\n\n//# sourceURL=webpack://front/./scripts/form.js?");
+
+/***/ }),
+
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const renderCards = __webpack_require__(/*! ./render_cards */ \"./scripts/render_cards.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nconst main = async () =>{\r\n    console.log(\"Esta saliendo todo bien\");\r\n    const response = await axios.get(\"http://localhost:3000/movies\");\r\n    renderCards(response.data);\r\n};\r\n\r\nmain();\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const renderCards = __webpack_require__(/*! ./render_cards */ \"./scripts/render_cards.js\");\r\nconst form = __webpack_require__(/*! ./form */ \"./scripts/form.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nconst main = async () => {\r\n  console.log(\"Esta saliendo todo bien\");\r\n  const response = await axios.get(\"http://localhost:3000/movies\");\r\n  renderCards(response.data);\r\n};\r\n\r\nconst submitButton = document.getElementById(\"submit\");\r\nsubmitButton?.addEventListener(\"click\", form);\r\n\r\nmain();\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 

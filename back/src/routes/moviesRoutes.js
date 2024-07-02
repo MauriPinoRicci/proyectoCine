@@ -5,6 +5,6 @@ const indexRouter = Router();
 
 indexRouter.get("/movies", moviesController.getMovies);
 
-indexRouter.post("/movies", moviesController.postMovies);
+indexRouter.post("/movies", moviesController.createMovie);
 
 module.exports = indexRouter;
