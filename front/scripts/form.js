@@ -1,4 +1,7 @@
-// Función para enviar el formulario y manejar el evento de envío
+function limpiarFormulario() {
+  document.getElementById("formulario").reset();
+}
+
 function enviarFormulario(event) {
   event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
@@ -38,18 +41,15 @@ function enviarFormulario(event) {
 
   // Enviar los datos a través de Axios
   axios
-    .post("http://localhost:3000/movies", movieData) // Asumiendo que "/movies" es la ruta correcta para crear una película en tu servidor
+    .post("http://localhost:3000/movies", movieData) 
     .then((response) => {
-      // Aquí puedes manejar la respuesta del servidor si es necesario
+      
       console.log("Película creada:", response.data);
 
-      // Limpiar el formulario después de enviar con éxito
       limpiarFormulario();
 
-      // Mostrar un mensaje de éxito
       alert("Película creada correctamente!");
 
-      //renderCards(response.data);
     })
     .catch((error) => {
       console.error("Error al crear película:", error);
@@ -59,7 +59,3 @@ function enviarFormulario(event) {
     });
 }
 
-// Función para limpiar los campos del formulario
-function limpiarFormulario() {
-  document.getElementById("formulario").reset();
-}
