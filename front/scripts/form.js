@@ -1,9 +1,9 @@
-function limpiarFormulario() {
-  document.getElementById("formulario").reset();
-}
+console.log("vinculado");
 
-function enviarFormulario(event) {
-  event.preventDefault(); // Evita que el formulario se envíe automáticamente
+const axios = require("axios");
+
+function enviarFormulario(e) {
+  e.preventDefault(); // Evita que el formulario se envíe automáticamente
 
   // Obtener los valores de los campos del formulario
   const titulo = document.getElementById("titulo").value.trim();
@@ -41,15 +41,11 @@ function enviarFormulario(event) {
 
   // Enviar los datos a través de Axios
   axios
-    .post("http://localhost:3000/movies", movieData) 
+    .post("http://localhost:3000/movies", movieData)
     .then((response) => {
-      
       console.log("Película creada:", response.data);
 
-      limpiarFormulario();
-
       alert("Película creada correctamente!");
-
     })
     .catch((error) => {
       console.error("Error al crear película:", error);
@@ -58,4 +54,11 @@ function enviarFormulario(event) {
       );
     });
 }
+
+document.querySelector("#button").addEventListener("click", ()=>{
+  document.querySelector("#formulario").reset()
+});
+
+document.querySelector("#submit").addEventListener("click", enviarFormulario);
+
 
